@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 01 · 蔚来NIO Powergo可视化大屏</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f4f4f2;
+        --ink: #171718;
+        --soft-ink: #6f7078;
+        --line: #d4d7de;
+        --paper: #eceff5;
+        --brand: #3a57cf;
+        --max: 1120px;
+        --gutter: clamp(16px, 2.3vw, 34px);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Manrope", "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", sans-serif;
+      }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--gutter);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(244, 244, 242, 0.82);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(171, 177, 194, 0.35);
+      }
+
+      .nav {
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        font-size: 0.88rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+      .brand b {
+        color: var(--brand);
+      }
+
+      .nav-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid rgba(171, 177, 194, 0.6);
+        background: rgba(236, 239, 245, 0.72);
+        color: var(--ink);
+        padding: 9px 12px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        transition: 180ms ease;
+        white-space: nowrap;
+      }
+      .btn:hover {
+        border-color: rgba(58, 87, 207, 0.55);
+        color: var(--brand);
+      }
+      .btn.is-active {
+        border-color: rgba(58, 87, 207, 0.65);
+        background: rgba(58, 87, 207, 0.08);
+        color: var(--brand);
+      }
+
+      main {
+        padding: 26px 0 64px;
+      }
+
+      .kicker {
+        color: var(--soft-ink);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.76rem;
+        margin: 14px 0 10px;
+      }
+
+      h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        margin: 0 0 10px;
+        font-size: clamp(32px, 4vw, 54px);
+        line-height: 1.05;
+      }
+
+      .meta {
+        color: #2a2d3b;
+        line-height: 1.8;
+        max-width: 74ch;
+      }
+
+      .divider {
+        height: 1px;
+        background: rgba(171, 177, 194, 0.55);
+        margin: 22px 0;
+      }
+
+      .shot {
+        border: 1px solid rgba(171, 177, 194, 0.55);
+        background: rgba(236, 239, 245, 0.55);
+      }
+      .shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          padding: 10px 0;
+          align-items: flex-start;
+        }
+        .nav-actions {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand"><b>T.Jenna</b> Portfolio</div>
+        <div class="nav-actions" aria-label="项目导航">
+          <a class="btn" href="index.html#works">返回</a>
+          <a class="btn is-active" href="project-01-nio.html">蔚来可视化大屏</a>
+          <a class="btn" href="project-02-pac.html">PAC project</a>
+          <a class="btn" href="project-03-wordcabinet.html">WordCabinet</a>
+          <a class="btn" href="project-04-ui-collection.html">海内外UI项目集</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="kicker">Project 01 · TOB</div>
+      <h1>蔚来 NIO Powergo 可视化大屏</h1>
+      <div class="meta">
+        蔚来可视化大屏 · B 端充电网络<br />
+        蔚来 NIO Powergo 可视化大屏设计，承载充电网络运行状态与业务数据，以图形语汇呈现能源系统的秩序与张力。
+      </div>
+
+      <div class="divider"></div>
+
+      <figure class="shot">
+        <img
+          src="selected%20works/%E8%94%9A%E6%9D%A5%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F.png"
+          alt="蔚来可视化大屏 项目展示"
+        />
+      </figure>
+    </main>
+  </body>
+</html>
